@@ -127,9 +127,9 @@ class Archive implements ArchiveInterface
     /**
      * @inheritdoc
      */
-    public function extractMembers($members, $toDirectory = null)
+    public function extractMembers($members, $toDirectory = null, $overwrite = false)
     {
-        $this->adapter->extractMembers($this->resource, $members, $toDirectory);
+        $this->adapter->extractMembers($this->resource, $members, $toDirectory, $overwrite);
 
         return $this;
     }

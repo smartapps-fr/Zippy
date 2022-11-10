@@ -65,10 +65,11 @@ interface ArchiveInterface extends \IteratorAggregate, \Countable
      *
      * @param string|MemberInterface[] $members     An array of members path
      * @param string                   $toDirectory The destination $directory
+     * @param bool                     $overwrite   Whether to overwrite existing files in destination directory
      *
      * @return ArchiveInterface
      *
      * @throws RuntimeException In case member could not be extracted
      */
-    public function extractMembers($members, $toDirectory = null);
+    public function extractMembers($members, $toDirectory = null, $overwrite = false);
 }
